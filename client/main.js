@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ImageList from './components/image_list';
-const App = () =>{
-  return (
-    <div>
-      <ImageList/>
-    </div>
-  );
+class App extends Component{
+   render(){
+    return (
+      <div>
+        <ImageList/>
+      </div>
+    );
+   };
 };
 Meteor.startup( ()=>{
 ReactDOM.render(<App/>, document.querySelector('.container'));
