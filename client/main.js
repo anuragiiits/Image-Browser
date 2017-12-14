@@ -17,13 +17,11 @@ class App extends Component{
       //NEVER DO THIS : this.state.images = [{}, {}]
   }
 
-  //whenever state is updated, the component is automatically rendered again
-  //hence, console is called 2 times
    render(){
-     console.log(this.state.images)
+    
     return (
       <div>
-        <ImageList/>
+        <ImageList images={this.state.images}/>
       </div>
     );
    };
